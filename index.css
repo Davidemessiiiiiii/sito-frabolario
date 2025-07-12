@@ -132,8 +132,15 @@ h3 {
         font-size: 0.9rem;
     }
 
+    .contenitoreCard {
+        flex-direction: column; /* qui si cambia da row a colonna */
+        align-items: center;    /* così centra le card nella colonna */
+        gap: 15px;              /* magari un gap un po’ più stretto */
+    }
+
     .card {
-        width: 100%;
+        width: 100%;      /* così occupano tutta la larghezza possibile */
+        max-width: 400px; /* metti un max-width per non fare card giganti su schermi larghi */
         padding: 15px;
     }
 
@@ -142,6 +149,7 @@ h3 {
         padding: 8px 14px;
     }
 }
+
 
 .bottonePerAutori {
     background: linear-gradient(135deg, #00ccff, #cc00ff);
