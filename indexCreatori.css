@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffb6f2, #b6e0ff);
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Titolo */
+h1 {
+    font-size: 2.5rem;
+    color: #1e0033;
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-shadow: 1px 1px #fff;
+}
+
+/* Immagine tutti */
+img[alt="Tutti"] {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Container delle card autori */
+.containerAutori {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Singola card autore */
+.card {
+    background: white;
+    border: 3px solid #e6ccff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 220px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Immagine autore */
+.imgAutore {
+    width: 100%;
+    height: 250px; /* Altezza fissa */
+    object-fit: cover; /* Ritaglia e centra */
+    object-position: center; /* Centra il soggetto */
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* Nome autore */
+.card h1 {
+    font-size: 1.3rem;
+    color: #a300cc;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .containerAutori {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img[alt="Tutti"] {
+        width: 80%;
+    }
+}
+
+.bottonePerFrabolario {
+    background: linear-gradient(135deg, #00ccff, #cc00ff);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.25s ease-in-out;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottonePerFrabolario:hover {
+    transform: scale(1.07);
+    background: linear-gradient(135deg, #0099cc, #9900cc);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
