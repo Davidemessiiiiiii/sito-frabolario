@@ -9,16 +9,15 @@
 body {
     background: linear-gradient(135deg, #ffb6f2, #b6e0ff);
     font-family: 'Poppins', sans-serif;
-    padding: 20px;
+    padding: 30px;
     color: #111;
     text-align: center;
 }
 
-/* Titolo top */
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #1e0033;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-weight: 900;
     text-shadow: 1px 1px #fff;
 }
@@ -37,33 +36,31 @@ h3 {
     font-style: italic;
 }
 
-/* Container cards */
 .contenitoreCard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
-/* Card style */
 .card {
     background: white;
     border: 3px solid #e6ccff;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     width: 280px;
-    max-width: 90%;
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
 }
 
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .card h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #a300cc;
     margin-bottom: 10px;
 }
@@ -74,7 +71,6 @@ h3 {
     margin-bottom: 15px;
 }
 
-/* Button stile figo */
 .toggleBtn {
     background-color: #a300cc;
     color: white;
@@ -93,11 +89,10 @@ h3 {
     transform: scale(1.05);
 }
 
-/* Esempi hidden */
 .esempi {
     display: none;
     margin-top: 15px;
-    text-align: left;
+    text-align: center;
     border-top: 1px dashed #ccc;
     padding-top: 10px;
     animation: fadeIn 0.3s ease-in-out;
@@ -106,50 +101,16 @@ h3 {
     line-height: 1.5;
 }
 
-/* Animazione smooth */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-10px);
+    opacity: 0;
+    transform: translateY(-10px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
     }
 }
-
-/* Mobile responsive magic */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        font-size: 0.9rem;
-    }
-
-    .contenitoreCard {
-        flex-direction: column; /* qui si cambia da row a colonna */
-        align-items: center;    /* così centra le card nella colonna */
-        gap: 15px;              /* magari un gap un po’ più stretto */
-    }
-
-    .card {
-        width: 100%;      /* così occupano tutta la larghezza possibile */
-        max-width: 400px; /* metti un max-width per non fare card giganti su schermi larghi */
-        padding: 15px;
-    }
-
-    .toggleBtn {
-        font-size: 0.8rem;
-        padding: 8px 14px;
-    }
-}
-
 
 .bottonePerAutori {
     background: linear-gradient(135deg, #00ccff, #cc00ff);
@@ -161,16 +122,47 @@ h3 {
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.25s ease-in-out;
-    margin-bottom: 30px;
+    margin: 30px auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .bottonePerAutori:hover {
     transform: scale(1.07);
     background: linear-gradient(135deg, #0099cc, #9900cc);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVE TELEFONO */
+@media (max-width: 700px) {
+    body {
+    padding: 15px;
+    font-size: 1.05rem;
+    }
+
+    h1 {
+    font-size: 2rem;
+    }
+
+    .contenitoreCard {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .card {
+    width: 90%;
+    max-width: 350px;
+    padding: 25px;
+    margin-bottom: 20px;
+    }
+
+    .toggleBtn {
+    font-size: 1rem;
+    padding: 12px 22px;
+    }
+
+    .esempi {
+    font-size: 1rem;
+    }
 }
